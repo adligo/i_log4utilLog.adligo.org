@@ -77,6 +77,30 @@ public class UtilLogWrapper implements I_LogDelegate  {
     	return false;
     }
     
+    public short getLevel() {
+    	if (logger.isLoggable(Level.FINEST)) {
+			return LOG_LEVEL_TRACE;
+		}
+		if (logger.isLoggable(Level.FINER)) {
+			return LOG_LEVEL_DEBUG;
+		}
+		if (logger.isLoggable(Level.FINE)) {
+			return LOG_LEVEL_INFO;
+		}
+		if (logger.isLoggable(Level.INFO)) {
+			return LOG_LEVEL_WARN;
+		}
+		if (logger.isLoggable(Level.WARNING)) {
+			return LOG_LEVEL_ERROR;
+		}
+		if (logger.isLoggable(Level.SEVERE)) {
+			return LOG_LEVEL_FATAL;
+		}
+		if (logger.isLoggable(Level.ALL)) {
+			return LOG_LEVEL_ALL;
+		} 
+		return LOG_LEVEL_OFF;
+    }
 	@Override
 	public void setEnabled(boolean p) {
 		enabled = p;

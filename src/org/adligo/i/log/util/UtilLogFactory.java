@@ -2,6 +2,9 @@ package org.adligo.i.log.util;
 
 import org.adligo.i.log.client.I_LogDelegate;
 import org.adligo.i.log.client.I_LogFactory;
+import org.adligo.i.log.client.ProxyLog;
+import org.adligo.i.util.client.I_Collection;
+import org.adligo.i.util.client.I_Iterator;
 import org.adligo.i.util.client.I_Map;
 
 /**
@@ -57,6 +60,22 @@ public class UtilLogFactory implements I_LogFactory {
 	@Override
 	public void setInitalLogLevels(I_Map props, I_LogFactory p) {
 		//do nothing static init
+	}
+
+	@Override
+	public void sendPreInitMessages(I_Collection iLogMessages) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setInitalLogLevels(I_Collection iProxyLogs) {
+		I_Iterator it = iProxyLogs.getIterator();
+		while (it.hasNext()) {
+			ProxyLog proxy =  (ProxyLog) it.next();
+			UtilLogWrapper log = new UtilLogWrapper(proxy.getLogName());
+			proxy.addDelegate(log);
+			proxy.setLevel(log.getLevel());
+		}
 	}
 
 	
