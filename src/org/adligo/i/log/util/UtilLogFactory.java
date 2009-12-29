@@ -29,9 +29,7 @@ public class UtilLogFactory implements I_LogFactory {
 	 */
 	public static final String LOG_FACTORY_NAME = UtilLogFactory.class.getName();
 	
-	public static final UtilLogFactory INSTANCE = new UtilLogFactory();
-	
-	private UtilLogFactory() {}
+	public UtilLogFactory() {}
 	
 	@SuppressWarnings("unchecked")
 	@Override
