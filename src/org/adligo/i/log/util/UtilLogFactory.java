@@ -4,8 +4,8 @@ import org.adligo.i.log.client.I_LogDelegate;
 import org.adligo.i.log.client.I_LogFactory;
 import org.adligo.i.log.client.ProxyLog;
 import org.adligo.i.util.client.I_Collection;
+import org.adligo.i.util.client.I_ImmutableMap;
 import org.adligo.i.util.client.I_Iterator;
-import org.adligo.i.util.client.I_Map;
 
 /**
  * Note all i_log delegations to java.util.common have different level names for 
@@ -56,7 +56,7 @@ public class UtilLogFactory implements I_LogFactory {
 	}
 
 	@Override
-	public void setInitalLogLevels(I_Map props, I_LogFactory p) {
+	public void setInitalLogLevels(I_ImmutableMap props, I_LogFactory p) {
 		//do nothing static init
 	}
 
