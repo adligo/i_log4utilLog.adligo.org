@@ -5,6 +5,8 @@ import java.util.logging.Logger;
 
 import org.adligo.i.log.client.I_LogDelegate;
 import org.adligo.i.log.client.SimpleLog;
+import org.adligo.i.util.client.AppenderFactory;
+import org.adligo.i.util.client.I_Appender;
 
 
 public class UtilLogWrapper implements I_LogDelegate  {
@@ -187,7 +189,7 @@ public class UtilLogWrapper implements I_LogDelegate  {
 	 */
 	@Override
 	public void debug(Object message, Throwable t) {
-		StringBuffer sb = new StringBuffer();
+		I_Appender sb = AppenderFactory.create();
 		SimpleLog.createLogMessage(message, t, sb);
 		logger.finer(sb.toString());
 	}
@@ -209,7 +211,7 @@ public class UtilLogWrapper implements I_LogDelegate  {
 	 */
 	@Override
 	public void error(Object message, Throwable t) {
-		StringBuffer sb = new StringBuffer();
+		I_Appender sb = AppenderFactory.create();
 		SimpleLog.createLogMessage(message, t, sb);
 		logger.warning(sb.toString());
 	}
@@ -221,7 +223,7 @@ public class UtilLogWrapper implements I_LogDelegate  {
 
 	@Override
 	public void fatal(Object message, Throwable t) {
-		StringBuffer sb = new StringBuffer();
+		I_Appender sb = AppenderFactory.create();
 		SimpleLog.createLogMessage(message, t, sb);
 		logger.severe(sb.toString());
 	}
@@ -233,7 +235,7 @@ public class UtilLogWrapper implements I_LogDelegate  {
 
 	@Override
 	public void info(Object message, Throwable t) {
-		StringBuffer sb = new StringBuffer();
+		I_Appender sb = AppenderFactory.create();
 		SimpleLog.createLogMessage(message, t, sb);
 		logger.fine(sb.toString());
 	}
@@ -245,7 +247,7 @@ public class UtilLogWrapper implements I_LogDelegate  {
 
 	@Override
 	public void trace(Object message, Throwable t) {
-		StringBuffer sb = new StringBuffer();
+		I_Appender sb = AppenderFactory.create();
 		SimpleLog.createLogMessage(message, t, sb);
 		logger.finest((String) sb.toString());
 	}
@@ -257,7 +259,7 @@ public class UtilLogWrapper implements I_LogDelegate  {
 
 	@Override
 	public void warn(Object message, Throwable t) {
-		StringBuffer sb = new StringBuffer();
+		I_Appender sb = AppenderFactory.create();
 		SimpleLog.createLogMessage(message, t, sb);
 		logger.info((String) sb.toString());		
 	}
