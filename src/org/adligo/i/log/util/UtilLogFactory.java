@@ -76,6 +76,11 @@ public class UtilLogFactory implements I_LogFactory {
 		}
 	}
 
+	@Override
+	public String getName() {
+		return UtilLogFactory.class.getName();
+	}
+
 	
 	
 }
