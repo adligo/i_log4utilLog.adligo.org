@@ -1,4 +1,4 @@
-package org.adligo.i.log.util;
+package org.adligo.i.util_log;
 
 import org.adligo.i.log.client.I_LogDelegate;
 import org.adligo.i.log.client.I_LogFactory;

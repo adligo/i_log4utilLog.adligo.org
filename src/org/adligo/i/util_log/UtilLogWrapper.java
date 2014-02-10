@@ -1,4 +1,4 @@
-package org.adligo.i.log.util;
+package org.adligo.i.util_log;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
