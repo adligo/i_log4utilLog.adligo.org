@@ -57,13 +57,14 @@ public class UtilLogFactory implements I_LogFactory {
 
 	@Override
 	public void setInitalLogLevels(I_ImmutableMap props, I_LogFactory p) {
-		//do nothing static init
+		//do nothing 
+		//the inital log levels are set the way the standard 
+		//java.util.log is set
 	}
 
 	@Override
 	public void sendPreInitMessages(I_Collection iLogMessages) {
-		// TODO Auto-generated method stub
-		
+		throw new RuntimeException("method not yet implemented ");
 	}
 
 	public void setInitalLogLevels(I_Collection iProxyLogs) {
