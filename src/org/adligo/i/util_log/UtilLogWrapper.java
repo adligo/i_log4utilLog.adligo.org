@@ -3,10 +3,10 @@ package org.adligo.i.util_log;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.adligo.i.log.client.I_LogDelegate;
-import org.adligo.i.log.client.SimpleLog;
-import org.adligo.i.util.client.AppenderFactory;
-import org.adligo.i.util.client.I_Appender;
+import org.adligo.i.log.shared.I_LogDelegate;
+import org.adligo.i.log.shared.SimpleLog;
+import org.adligo.i.util.shared.AppenderFactory;
+import org.adligo.i.util.shared.I_Appender;
 
 
 public class UtilLogWrapper implements I_LogDelegate  {

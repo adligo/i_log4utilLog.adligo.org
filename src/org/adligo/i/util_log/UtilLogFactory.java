@@ -1,11 +1,11 @@
 package org.adligo.i.util_log;
 
-import org.adligo.i.log.client.I_LogDelegate;
-import org.adligo.i.log.client.I_LogFactory;
-import org.adligo.i.log.client.ProxyLog;
-import org.adligo.i.util.client.I_Collection;
-import org.adligo.i.util.client.I_ImmutableMap;
-import org.adligo.i.util.client.I_Iterator;
+import org.adligo.i.log.shared.I_LogDelegate;
+import org.adligo.i.log.shared.I_LogFactory;
+import org.adligo.i.log.shared.ProxyLog;
+import org.adligo.i.util.shared.I_Collection;
+import org.adligo.i.util.shared.I_ImmutableMap;
+import org.adligo.i.util.shared.I_Iterator;
 
 /**
  * Note all i_log delegations to java.util.common have different level names for 
