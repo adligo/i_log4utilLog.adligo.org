@@ -1,5 +1,6 @@
-bin/
-classes/
-classes_e/
+/bin/
+/build/
+/classes/
+/classes_e/
 i_log4utilLog.jar
 
